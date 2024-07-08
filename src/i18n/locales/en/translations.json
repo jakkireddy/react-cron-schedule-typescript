@@ -1,5 +1,5 @@
 {
-  "additionalOptions": "Additional Options22",
+  "additionalOptions": "Additional Options",
   "ifTaskIsOn": "If task (or first instance of a task sequence) is on",
   "pushToNext": "push to next",
   "noteText": "If the next {{day}} falls in the following month, the task will be created on {{previousDay}} instead."

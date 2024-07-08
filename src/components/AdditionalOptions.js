@@ -46,7 +46,7 @@ function AdditionalOptions(props) {
                         color: `${!isAdditionalOptionsActive || disabled ? 'gray' : ''}`
                     }}
                 >
-                    If task (or first instance of a task sequence) is on a
+                    {i18n.t("ifTaskIsOn")}
                 </label>
                 <select
                     key="skipFrom"
@@ -69,7 +69,7 @@ function AdditionalOptions(props) {
                         color: `${!isAdditionalOptionsActive || disabled ? 'gray' : ''}`
                     }}
                 >
-                    push to next
+                    {i18n.t("pushToNext")}
                 </label>
                 <select
                     key="skipTo"

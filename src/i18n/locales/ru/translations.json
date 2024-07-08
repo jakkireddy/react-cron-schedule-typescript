@@ -1,6 +1,6 @@
 {
-  "additionalOptions": "Additional Options33",
-  "ifTaskIsOn": "Si la tâche est sur",
-  "pushToNext": "passer au suivant",
-  "noteText": "Si le prochain {{day}} tombe dans le mois suivant, la tâche sera créée le {{previousDay}}"
+  "additionalOptions": "Дополнительные возможности",
+  "ifTaskIsOn": "Если задача (или её первый экземпляр) выпадает на",
+  "pushToNext": "перенести на следующий",
+  "noteText": "Если следующий {{day}} выпадает на следующий месяц, задача будет создана вместо этого на {{previousDay}}"
 }
