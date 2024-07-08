@@ -2,13 +2,13 @@ import React from 'react'
 
 import css from './AdditionalOptions.module.css';
 import {MONTH_OPTIONS, WEEKDAYS_MAP} from '../utils/constants'
-import {useTranslation} from "react-i18next";
+import i18n from "../i18n";
 
 function AdditionalOptions(props) {
-    const {t} = useTranslation("additionalOptions"); // Load namespace 'additionalOptions'
     const {disabled = false, styles = {}, state = {}, setState, setValue} = props;
     const {isAdditionalOptionsActive, skipFrom, skipTo, selectedMonthDate, monthOption} = state
 
+    // i18n.changeLanguage("ru")
     const handleAdditionalOptionCheckbox = event => {
         setState({isAdditionalOptionsActive: !isAdditionalOptionsActive})
         setValue({
@@ -28,7 +28,7 @@ function AdditionalOptions(props) {
     return (
         <div>
             <div>
-                {t('additionalOptions')}
+                {i18n.t("additionalOptions")}
             </div>
             <div className={css.additionalOptionContainer} style={styles.additionalOptionContainer}>
                 <input
