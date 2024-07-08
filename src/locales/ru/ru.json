@@ -1,0 +1,8 @@
+{
+  "additionalOptions": {
+    "additionalOptions": "Additional Options33",
+    "ifTaskIsOn": "Si la tâche est sur",
+    "pushToNext": "passer au suivant",
+    "noteText": "Si le prochain {{day}} tombe dans le mois suivant, la tâche sera créée le {{previousDay}}"
+  }
+}

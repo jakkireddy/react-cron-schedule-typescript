@@ -1,17 +1,19 @@
 import React from 'react'
 
 import css from './AdditionalOptions.module.css';
-import { MONTH_OPTIONS, WEEKDAYS_MAP } from '../utils/constants'
+import {MONTH_OPTIONS, WEEKDAYS_MAP} from '../utils/constants'
+import {useTranslation} from "react-i18next";
 
 function AdditionalOptions(props) {
-	const {disabled = false, styles = {}, state = {}, setState, setValue} = props;
+    const {t} = useTranslation("additionalOptions"); // Load namespace 'additionalOptions'
+    const {disabled = false, styles = {}, state = {}, setState, setValue} = props;
     const {isAdditionalOptionsActive, skipFrom, skipTo, selectedMonthDate, monthOption} = state
 
     const handleAdditionalOptionCheckbox = event => {
         setState({isAdditionalOptionsActive: !isAdditionalOptionsActive})
         setValue({
-            skipFrom: !isAdditionalOptionsActive ? 5: undefined,
-            skipTo: !isAdditionalOptionsActive ? 1: undefined
+            skipFrom: !isAdditionalOptionsActive ? 5 : undefined,
+            skipTo: !isAdditionalOptionsActive ? 1 : undefined
         })
     }
 
@@ -26,7 +28,7 @@ function AdditionalOptions(props) {
     return (
         <div>
             <div>
-                Additional Options
+                {t('additionalOptions')}
             </div>
             <div className={css.additionalOptionContainer} style={styles.additionalOptionContainer}>
                 <input
@@ -37,9 +39,12 @@ function AdditionalOptions(props) {
                     type="checkbox"
                     onChange={handleAdditionalOptionCheckbox}
                 />
-                <label 
+                <label
                     className={css.additionalOptionText}
-		            style={{...styles.additionalOptionText, color: `${!isAdditionalOptionsActive || disabled ? 'gray' : ''}`}}
+                    style={{
+                        ...styles.additionalOptionText,
+                        color: `${!isAdditionalOptionsActive || disabled ? 'gray' : ''}`
+                    }}
                 >
                     If task (or first instance of a task sequence) is on a
                 </label>
@@ -57,9 +62,12 @@ function AdditionalOptions(props) {
                         </option>
                     ))}
                 </select>
-                <label 
+                <label
                     className={css.additionalOptionText}
-		            style={{...styles.additionalOptionText, color: `${!isAdditionalOptionsActive || disabled ? 'gray' : ''}`}}
+                    style={{
+                        ...styles.additionalOptionText,
+                        color: `${!isAdditionalOptionsActive || disabled ? 'gray' : ''}`
+                    }}
                 >
                     push to next
                 </label>
@@ -78,7 +86,7 @@ function AdditionalOptions(props) {
                     ))}
                 </select>
             </div>
-            { isAdditionalOptionsActive && skipFrom !== undefined && skipTo !== undefined &&
+            {isAdditionalOptionsActive && skipFrom !== undefined && skipTo !== undefined &&
                 monthOption === MONTH_OPTIONS.STANDARD && selectedMonthDate > 22 &&
                 <div className={css.noteComponent}>
                     <span>NOTE: </span>
@@ -88,7 +96,7 @@ function AdditionalOptions(props) {
                 </div>
             }
         </div>
-  )
+    )
 }
 
 export default AdditionalOptions
