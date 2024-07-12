@@ -29,7 +29,7 @@ const initialState = {
 	months: [new Date().getMonth()], // for yearly
 	startDate: new Date(),
 	endDate: new Date(),
-	repeat: REPEAT_OPTIONS.WEEKLY,
+	repeat: REPEAT_OPTIONS.MONTHLY,
 	frequency: 1,
 	repeatFor: undefined, 
 	repeatForType: undefined,

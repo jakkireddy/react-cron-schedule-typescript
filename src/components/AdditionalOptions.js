@@ -8,7 +8,6 @@ function AdditionalOptions(props) {
     const {disabled = false, styles = {}, state = {}, setState, setValue} = props;
     const {isAdditionalOptionsActive, skipFrom, skipTo, selectedMonthDate, monthOption} = state
 
-    // i18n.changeLanguage("ru")
     const handleAdditionalOptionCheckbox = event => {
         setState({isAdditionalOptionsActive: !isAdditionalOptionsActive})
         setValue({

@@ -115,7 +115,7 @@ const commonArgs = {
     disabled: false,
     showCronExpression: false,
     showOnlyBottomBorder: true,
-    onChange: (val) => {console.log("===> onChange: ", val)}, 
+    onChange: (val) => {/*console.log("===> onChange: ", val)*/},
     styles: {
         root: { },
         frequencyContainer: {},

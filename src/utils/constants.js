@@ -1,3 +1,5 @@
+import i18n from "../i18n";
+
 export const WEEKDAYS = {
 	Sunday: 'Sunday',
 	Monday: 'Monday',
@@ -70,7 +72,7 @@ export const END_TYPES = {
 }
 
 export const REPEAT_OPTIONS = {
-	YEARLY: 'yearly',
-	MONTHLY: 'monthly',
-	WEEKLY: 'weekly'
+	YEARLY: i18n.t("yearly"),
+	MONTHLY: i18n.t("monthly"),
+	WEEKLY: i18n.t("weekly")
 }
