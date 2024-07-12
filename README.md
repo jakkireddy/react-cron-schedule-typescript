@@ -3,26 +3,26 @@ A simple and lightweight library for scheduling recurring events in React.
 
 ## Getting Started
 ```shell
-npm install react-cron-schedule
+npm install react-cron-schedule-typescript
 ```
 
 or 
 
 if you are installing from github package registry
 ```shell
-npm install @qubryx/react-cron-schedule
+npm install @gdev2018/react-cron-schedule
 ```
 
 If the library is not working as expected (Only for the user installed by github package registry), you may need to add the following line to your `.npmrc` file.
 ```npmrc
-  @qubryx:registry=https://npm.pkg.github.com/qubryx
+  @gdev2018:registry=https://npm.pkg.github.com/gdev2018
 ```
 
 ## Demo
 [Live Demo](https://fahimkk.github.io/react-recurring-job-demo/)
 
-![Image](https://github.com/qubryx/react-cron-schedule/blob/main/src/assets/weekly.png)
-![Image](https://github.com/qubryx/react-cron-schedule/blob/main/src/assets/monthly.png)
+![Image](https://github.com/gdev2018/react-cron-schedule/blob/main/src/assets/weekly.png)
+![Image](https://github.com/gdev2018/react-cron-schedule/blob/main/src/assets/monthly.png)
 
 ## Usage
 
@@ -181,7 +181,7 @@ export default App;
 
 ```
 
-![Image](https://github.com/qubryx/react-cron-schedule/blob/main/src/assets/weeklyStyled.png)
+![Image](https://github.com/gdev2018/react-cron-schedule/blob/main/src/assets/weeklyStyled.png)
 
 
 ## License

@@ -1,10 +1,10 @@
 {
-  "name": "react-cron-schedule",
+  "name": "react-cron-schedule-typescript",
   "version": "2.1.6",
   "description": "A simple react component for creating cron expression",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "repository": "git://github.com/qubryx/react-cron-schedule.git",
+  "repository": "git://github.com/gdev2018/react-cron-schedule-typescript.git",
   "files": [
     "dist"
   ],
@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-lib": "rollup -c"
   },
-  "author": "Fahim",
+  "author": "Fahim, gdev2018",
   "license": "Apache License 2.0",
   "publishConfig": {},
   "keywords": [
@@ -31,6 +31,7 @@
     "@babel/preset-react": "^7.18.6",
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-json": "latest",
     "babel-loader": "^8.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
