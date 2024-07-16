@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/react-cron-schedule-typescript)
+
 # React Cron Schedule 
 A simple and lightweight library for scheduling recurring events in React.
 
@@ -10,7 +12,7 @@ or
 
 if you are installing from github package registry
 ```shell
-npm install @gdev2018/react-cron-schedule
+npm install @gdev2018/react-cron-schedule-typescript
 ```
 
 If the library is not working as expected (Only for the user installed by github package registry), you may need to add the following line to your `.npmrc` file.
@@ -21,13 +23,13 @@ If the library is not working as expected (Only for the user installed by github
 ## Demo
 [Live Demo](https://fahimkk.github.io/react-recurring-job-demo/)
 
-![Image](https://github.com/gdev2018/react-cron-schedule/blob/main/src/assets/weekly.png)
-![Image](https://github.com/gdev2018/react-cron-schedule/blob/main/src/assets/monthly.png)
+![Image](https://github.com/gdev2018/react-cron-schedule-typescript/blob/main/src/assets/weekly.png)
+![Image](https://github.com/gdev2018/react-cron-schedule-typescript/blob/main/src/assets/monthly.png)
 
 ## Usage
 
 ```javascript
-import { Recurrence } from 'react-cron-schedule';
+import { Recurrence } from 'react-cron-schedule-typescript';
 
 function App() {
   return (
@@ -72,7 +74,7 @@ value prop can be used to pass default values
 <br/><br/>
 
 ```javascript
-import { Recurrence } from 'react-cron-schedule';
+import { Recurrence } from 'react-cron-schedule-typescript';
 
 function App() {
   return (
@@ -127,7 +129,7 @@ export default App;
 
 ```javascript
 
-import { Recurrence } from 'react-cron-schedule';
+import { Recurrence } from 'react-cron-schedule-typescript';
 
 function App() {
   return (
@@ -181,7 +183,7 @@ export default App;
 
 ```
 
-![Image](https://github.com/gdev2018/react-cron-schedule/blob/main/src/assets/weeklyStyled.png)
+![Image](https://github.com/gdev2018/react-cron-schedule-typescript/blob/main/src/assets/weeklyStyled.png)
 
 
 ## License
