@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import purgecss from 'vite-plugin-purgecss';
 
 import postcss from 'postcss';
+import * as path from "path";
 
 export default defineConfig({
   plugins: [
@@ -25,10 +26,9 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.js'),
       name: 'react-cron-schedule-typescript',
-      fileName: (format) => `dist/${format === 'es' ? 'index.mjs' : 'index.cjs'}`,
+      fileName: (format) => `${format === 'es' ? 'index.mjs' : 'index.cjs'}`,
     },
     rollupOptions: {
-      // Specify external dependencies
       external: id => /^node:/.test(id),
       output: {
         globals: {
