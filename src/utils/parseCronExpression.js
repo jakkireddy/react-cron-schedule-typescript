@@ -1,4 +1,4 @@
-const parser = require('cron-schedule-parser')
+import parser from "cron-schedule-parser";
 
 export function getEndDateFromCount(
 	cronExpression,
