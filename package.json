@@ -10,9 +10,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "vite_start": "vite",
     "vite_build": "vite build",
-    "build-lib": "rollup -c",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
