@@ -21,7 +21,7 @@ If the library is not working as expected (Only for the user installed by github
 ```
 
 ## Demo
-[Live Demo](https://fahimkk.github.io/react-recurring-job-demo/)
+[Live Demo](https://gdev2018.github.io/gdev2018/)
 
 ![Image](https://github.com/gdev2018/react-cron-schedule-typescript/blob/main/src/assets/weekly.png)
 ![Image](https://github.com/gdev2018/react-cron-schedule-typescript/blob/main/src/assets/monthly.png)
