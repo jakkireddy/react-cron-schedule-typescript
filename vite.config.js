@@ -26,7 +26,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.js'),
       name: 'react-cron-schedule-typescript',
-      fileName: (format) => `${format === 'es' ? 'index.mjs' : 'index.cjs'}`,
+      fileName: (format) => `${format === 'es' ? 'index.es.js' : 'index.js'}`,
     },
     rollupOptions: {
       external: id => /^node:/.test(id),
