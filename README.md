@@ -1,4 +1,4 @@
-[![npm version](https://badge.fury.io/js/typescript.svg)](https://www.npmjs.com/package/react-cron-schedule-typescript)
+[![npm version](https://badge.fury.io/js/react-cron-schedule-typescript.svg)](https://www.npmjs.com/package/react-cron-schedule-typescript)
 
 # React Cron Schedule 
 A simple and lightweight library for scheduling recurring events in React.
