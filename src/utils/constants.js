@@ -37,6 +37,21 @@ export const MONTHS = [
   i18n.t("December"),
 ];
 
+export const DAYS_IN_MONTH = [
+  31,
+  29, // Now this is using only for date selection in monthly dropdown.
+  31,
+  30,
+  31,
+  30,
+  31,
+  31,
+  30,
+  31,
+  30,
+  31,
+];
+
 export const REPEAT_TYPES = {
   WEEKS: "weeks",
   DAYS: "days",
@@ -75,4 +90,8 @@ export const REPEAT_OPTIONS = {
   YEARLY: i18n.t("yearly"),
   MONTHLY: i18n.t("monthly"),
   WEEKLY: i18n.t("weekly"),
+  SEMI_ANNUAL: "semi-annual",
+  BI_MONTHLY: "bi-monthly",
+  QUARTERLY: "quarterly",
+  BI_WEEKLY: "bi-weekly",
 };
