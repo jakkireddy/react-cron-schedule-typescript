@@ -6,6 +6,8 @@ import css from "./DateSelection.module.css";
 import { END_TYPES } from "../utils/constants";
 import { getDateWithZero, getMonthName, getWeekday } from "../utils/dateUtils";
 
+import i18n from "../i18n";
+
 function DateSelection(props) {
   const {
     disabled = false,
@@ -47,7 +49,7 @@ function DateSelection(props) {
     <div className={css.mainContainer} style={styles.dateContainer}>
       <div className={css.startContainer}>
         <label style={styles.startLabel} className={css.startLabel}>
-          Start
+          {i18n.t("Start")}
         </label>
         <DatePicker
           disabled={disabled}
@@ -57,7 +59,7 @@ function DateSelection(props) {
         />
       </div>
       <div className={css.endContainer}>
-        <label style={styles.endLabel}>End</label>
+        <label style={styles.endLabel}> {i18n.t("End")}</label>
         <select
           key="endType"
           disabled={disabled}
@@ -67,13 +69,13 @@ function DateSelection(props) {
           onChange={handleEndTypeChange}
         >
           <option key="NoEnd" value={END_TYPES.NO_END}>
-            no end date
+            {i18n.t("no end date")}
           </option>
           <option key="Date" value={END_TYPES.DATE}>
-            on this day
+            {i18n.t("on this day")}
           </option>
           <option key="Count" value={END_TYPES.COUNT}>
-            after
+            {i18n.t("after")}
           </option>
         </select>
         {selectedEndType === END_TYPES.DATE ? (
@@ -94,12 +96,14 @@ function DateSelection(props) {
               type="number"
               min={1}
             />
-            <label style={{ marginLeft: 10 }}>occurance</label>
+            <label style={{ marginLeft: 10 }}>{i18n.t("occurrence")}</label>
           </>
         ) : null}
       </div>
       {selectedEndType === END_TYPES.COUNT && countEndDate && (
-        <div className={css.countEndDate}>{`Ends on ${countEndDateText}`}</div>
+        <div className={css.countEndDate}>
+          {i18n.t("Ends on ") + `${countEndDateText}`}
+        </div>
       )}
     </div>
   );

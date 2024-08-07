@@ -14,13 +14,13 @@ import { getRepeatFromFreqType } from "../utils/utils";
 import i18n from "../i18n";
 
 const repeatOptions = [
-  { value: REPEAT_OPTIONS.WEEKLY, label: "Weekly" },
-  { value: REPEAT_OPTIONS.BI_WEEKLY, label: "Bi-Weekly" },
-  { value: REPEAT_OPTIONS.MONTHLY, label: "Monthly" },
-  { value: REPEAT_OPTIONS.BI_MONTHLY, label: "Bi-Monthly" },
-  { value: REPEAT_OPTIONS.QUARTERLY, label: "Quaterly" },
-  { value: REPEAT_OPTIONS.SEMI_ANNUAL, label: "Semi Annual" },
-  { value: REPEAT_OPTIONS.YEARLY, label: "Annual" },
+  { value: REPEAT_OPTIONS.WEEKLY, label: REPEAT_OPTIONS.WEEKLY },
+  { value: REPEAT_OPTIONS.BI_WEEKLY, label: REPEAT_OPTIONS.BI_WEEKLY },
+  { value: REPEAT_OPTIONS.MONTHLY, label: REPEAT_OPTIONS.MONTHLY },
+  { value: REPEAT_OPTIONS.BI_MONTHLY, label: REPEAT_OPTIONS.BI_MONTHLY },
+  { value: REPEAT_OPTIONS.QUARTERLY, label: REPEAT_OPTIONS.QUARTERLY },
+  { value: REPEAT_OPTIONS.SEMI_ANNUAL, label: REPEAT_OPTIONS.SEMI_ANNUAL },
+  { value: REPEAT_OPTIONS.YEARLY, label: REPEAT_OPTIONS.YEARLY },
 ];
 
 const freqCountMap = {

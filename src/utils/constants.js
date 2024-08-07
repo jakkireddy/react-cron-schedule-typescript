@@ -68,11 +68,11 @@ export const MONTH_DAY_TYPES = {
 };
 
 export const ORDERS = {
-  FIRST: "First",
-  SECOND: "Second",
-  THIRD: "Third",
-  FOURTH: "Fourth",
-  LAST: "Last",
+  FIRST: i18n.t("First"),
+  SECOND: i18n.t("Second"),
+  THIRD: i18n.t("Third"),
+  FOURTH: i18n.t("Fourth"),
+  LAST: i18n.t("Last"),
 };
 
 export const MONTH_OPTIONS = {
@@ -90,8 +90,8 @@ export const REPEAT_OPTIONS = {
   YEARLY: i18n.t("yearly"),
   MONTHLY: i18n.t("monthly"),
   WEEKLY: i18n.t("weekly"),
-  SEMI_ANNUAL: "semi-annual",
-  BI_MONTHLY: "bi-monthly",
-  QUARTERLY: "quarterly",
-  BI_WEEKLY: "bi-weekly",
+  SEMI_ANNUAL: i18n.t("semi-annual"),
+  BI_MONTHLY: i18n.t("bi-monthly"),
+  QUARTERLY: i18n.t("quarterly"),
+  BI_WEEKLY: i18n.t("bi-weekly"),
 };

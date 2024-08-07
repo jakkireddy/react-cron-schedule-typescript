@@ -9,6 +9,7 @@ import {
 import RepeatForDropdown from "./RepeatForDropdown";
 import { setRepeatCountAndTypeVal } from "../utils/utils";
 import { getDaysInMonth } from "../utils/dateUtils";
+import i18n from "../i18n";
 
 const OrderOptions = [
   ORDERS.FIRST,
@@ -118,11 +119,17 @@ function MonthSelection(props) {
 
   const monthDayTypeOptions = () => {
     let options = [
-      { name: "Day", value: MONTH_DAY_TYPES.DAY },
-      { name: "Weekday", value: MONTH_DAY_TYPES.WEEKDAY },
-      { name: "Full week", value: MONTH_DAY_TYPES.FULL_WEEK },
-      { name: "Full working week", value: MONTH_DAY_TYPES.FULL_WORKING_WEEK },
-      { name: "Multiple Days", value: MONTH_DAY_TYPES.SELECT_DAYS_MANUALLY },
+      { name: i18n.t("Day"), value: MONTH_DAY_TYPES.DAY },
+      { name: i18n.t("Weekday"), value: MONTH_DAY_TYPES.WEEKDAY },
+      { name: i18n.t("Full week"), value: MONTH_DAY_TYPES.FULL_WEEK },
+      {
+        name: i18n.t("Full working week"),
+        value: MONTH_DAY_TYPES.FULL_WORKING_WEEK,
+      },
+      {
+        name: i18n.t("Multiple Days"),
+        value: MONTH_DAY_TYPES.SELECT_DAYS_MANUALLY,
+      },
     ];
     return options;
   };
@@ -142,7 +149,7 @@ function MonthSelection(props) {
   return (
     <div className={css.mainContainer} style={styles.monthContainer}>
       <label className={css.onLabel} style={styles.onLabel}>
-        On
+        {i18n.t("On")}
       </label>
 
       <form className={css.container}>
@@ -176,12 +183,12 @@ function MonthSelection(props) {
             }}
             className={css.dayLabel}
           >
-            day
+            {i18n.t("day")}
           </label>
         </div>
 
         <label className={css.orLabel} style={styles.orLabel}>
-          or
+          {i18n.t("or")}
         </label>
 
         <div className={css.customContainer}>
