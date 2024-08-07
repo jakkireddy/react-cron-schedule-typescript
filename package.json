@@ -12,7 +12,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "vite_build": "vite build",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "npm_publish": "vite build && npm version patch && npm publish"
   },
   "author": "Fahim, gdev2018",
   "license": "Apache License 2.0",
