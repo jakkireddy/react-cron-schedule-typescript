@@ -8,6 +8,7 @@ import {
   REPEAT_TYPES,
   WEEKDAYS_MAP,
 } from "../utils/constants";
+import i18n from "../i18n";
 
 function ReccurringText(props) {
   const {
@@ -36,13 +37,18 @@ function ReccurringText(props) {
     isRepeatForDisabled,
   } = state;
 
+  console.log("ReccurringText state=", state);
+
   const getOccursStartDate = useCallback(() => {
     if (!startDate) return "";
     const dateObj = new Date(startDate);
     const weekDay = getWeekday(startDate);
     const monthName = getMonthName(startDate);
     const date = getDateWithZero(startDate);
-    return `starting ${weekDay}, ${date} ${monthName} ${dateObj.getFullYear()}`;
+    return (
+      i18n.t("starting") +
+      ` ${weekDay}, ${date} ${monthName} ${dateObj.getFullYear()}`
+    );
   }, [startDate]);
 
   const getAdditionalInfo = useCallback(() => {
@@ -57,9 +63,17 @@ function ReccurringText(props) {
     const skipToData = WEEKDAYS_MAP.find((day) => day.value === skipTo);
     const dayText =
       monthOption === MONTH_OPTIONS.STANDARD
-        ? `day ${selectedMonthDate} is`
-        : `the ${selectedMonthDayOrder?.toLowerCase()} ${selectedMonthDay} is`;
-    return `. If ${dayText} ${skipFromData.name} then push to next ${skipToData.name}`;
+        ? i18n.t("starting") + ` ${selectedMonthDate} ` + i18n.t("is")
+        : i18n.t("the") +
+          ` ${selectedMonthDayOrder?.toLowerCase()} ${selectedMonthDay} ` +
+          i18n.t("is");
+    return (
+      `. ` +
+      i18n.t("If") +
+      ` ${dayText} ${skipFromData.name} ` +
+      i18n.t("then push to next") +
+      ` ${skipToData.name}`
+    );
   }, [
     isAdditionalOptionsActive,
     skipFrom,
@@ -80,9 +94,9 @@ function ReccurringText(props) {
       return "";
     const repeatForTypeText =
       repeatForType === REPEAT_TYPES.WORKING_DAYS
-        ? "working days"
+        ? i18n.t("working days")
         : repeatForType;
-    return `(repeat for ${repeatFor} ${repeatForTypeText})`;
+    return `(` + i18n.t("repeat for") + ` ${repeatFor} ${repeatForTypeText})`;
   }, [repeatFor, repeatForType, isRepeatForDisabled, selectedMonthDayOrder]);
 
   const getLastRepeatForText = useCallback(() => {
@@ -109,7 +123,7 @@ function ReccurringText(props) {
     if (name.length > 1) {
       const l1 = name.pop();
       const l2 = name.pop();
-      name.push(`${l2} and ${l1}`);
+      name.push(`${l2} ` + i18n.t("and") + ` ${l1}`);
     }
     return name.join(", ");
   }, [startDate, selectedWeeks]);
@@ -132,7 +146,9 @@ function ReccurringText(props) {
       else {
         text =
           weekDays.slice(0, -1).join(", ") +
-          " and " +
+          " " +
+          i18n.t("and") +
+          " " +
           weekDays[weekDays.length - 1];
       }
     }
@@ -150,52 +166,62 @@ function ReccurringText(props) {
           .slice(0, -1)
           .map((x) => MONTHS[x])
           .join(", ") +
-        " and " +
+        " " +
+        i18n.t("and") +
+        " " +
         MONTHS[months[months.length - 1]]
       );
     }
   }, [months]);
 
-  if (repeat === "weekly" && selectedWeeks?.length > 0) {
+  if (repeat === i18n.t("weekly") && selectedWeeks?.length > 0) {
     return (
       <div style={{ marginTop: 20, ...styles.recurrenceText }}>
-        Occurs
+        {i18n.t("Occurs")}
         <span style={{ fontWeight: "bold", marginLeft: 5, marginRight: 5 }}>
-          every {frequency > 1 ? ` ${frequency} weeks on` : ""}{" "}
+          {i18n.t("every") + " "}
+          {frequency > 1 ? ` ${frequency} ` + i18n.t("weeks on") : ""}{" "}
           {getSelectedName()}
         </span>
         {getOccursStartDate()}
       </div>
     );
   }
-  if (repeat === "monthly") {
+  if (repeat === i18n.t("monthly")) {
     const occursEvery =
       monthOption === "standard"
-        ? `day ${selectedMonthDate} ${getRepeatForText()}`
-        : `the ${selectedMonthDayOrder?.toLowerCase()} ${getLastRepeatForText()} ${getSelectedMonthDayText()} ${getRepeatForText()}`;
+        ? i18n.t("day") + ` ${selectedMonthDate} ${getRepeatForText()}`
+        : i18n.t("the") +
+          ` ${selectedMonthDayOrder?.toLowerCase()} ${getLastRepeatForText()} ${getSelectedMonthDayText()} ${getRepeatForText()}`;
 
     return (
       <div style={{ marginTop: 20, ...styles.recurrenceText }}>
-        Occurs
+        {i18n.t("Occurs")}
         <span style={{ fontWeight: "bold", marginLeft: 5, marginRight: 5 }}>
-          {occursEvery} of every{" "}
-          {frequency > 1 ? `${frequency} months` : "month"}
+          {occursEvery} {i18n.t("of every")}{" "}
+          {frequency > 1 ? `${frequency} ` + i18n.t("months") : i18n.t("month")}
         </span>
         {getOccursStartDate()}
         {getAdditionalInfo()}
       </div>
     );
   }
-  if (repeat === "yearly") {
+  if (repeat === i18n.t("yearly")) {
     const monthName = joinWithCommasAnd();
     const occursEvery =
       monthOption === "standard"
-        ? `every ${selectedMonthDate} ${getRepeatForText()} of ${monthName}`
-        : `the ${selectedMonthDayOrder?.toLowerCase()} ${getLastRepeatForText()} ${getSelectedMonthDayText()} ${getRepeatForText()} of ${monthName}`;
+        ? i18n.t("every") +
+          ` ${selectedMonthDate} ${getRepeatForText()} ` +
+          i18n.t("of") +
+          ` ${monthName}`
+        : i18n.t("the") +
+          ` ${selectedMonthDayOrder?.toLowerCase()} ${getLastRepeatForText()} ${getSelectedMonthDayText()} ${getRepeatForText()} ` +
+          i18n.t("of") +
+          ` ${monthName}`;
 
     return (
       <div style={{ marginTop: 20, ...styles.recurrenceText }}>
-        Occurs
+        {i18n.t("Occurs")}
         <span style={{ fontWeight: "bold", marginLeft: 5, marginRight: 5 }}>
           {occursEvery}
         </span>

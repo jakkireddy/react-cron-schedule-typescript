@@ -106,7 +106,14 @@ function AdditionalOptions(props) {
           <div className={css.noteComponent}>
             <span>NOTE: </span>
             <span className={css.noteText}>
-              {`If the next ${WEEKDAYS_MAP.find((x) => x.value === skipTo)?.name} falls in the following month, the task will be created on ${WEEKDAYS_MAP.find((x) => x.value === skipFrom)?.name} instead.`}
+              {i18n.t("pushToNext") +
+                ` ${WEEKDAYS_MAP.find((x) => x.value === skipTo)?.name} ` +
+                i18n.t(
+                  "falls in the following month, the task will be created on",
+                ) +
+                ` ${WEEKDAYS_MAP.find((x) => x.value === skipFrom)?.name} ` +
+                i18n.t("instead") +
+                `.`}
             </span>
           </div>
         )}

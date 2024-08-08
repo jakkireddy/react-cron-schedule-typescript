@@ -53,18 +53,18 @@ export const DAYS_IN_MONTH = [
 ];
 
 export const REPEAT_TYPES = {
-  WEEKS: "weeks",
-  DAYS: "days",
-  WORKING_DAYS: "workingDays",
+  WEEKS: i18n.t("weeks"),
+  DAYS: i18n.t("days"),
+  WORKING_DAYS: i18n.t("workingDays"),
 };
 
 export const MONTH_DAY_TYPES = {
-  FULL_WEEK: "fullWeek",
-  FULL_WORKING_WEEK: "fullWorkingWeek",
-  DAY: "day",
-  WEEKDAY: "weekday",
-  CUSTOM: "custom",
-  SELECT_DAYS_MANUALLY: "selectDaysManually",
+  FULL_WEEK: i18n.t("fullWeek"),
+  FULL_WORKING_WEEK: i18n.t("fullWorkingWeek"),
+  DAY: i18n.t("day"),
+  WEEKDAY: i18n.t("weekday"),
+  CUSTOM: i18n.t("custom"),
+  SELECT_DAYS_MANUALLY: i18n.t("selectDaysManually"),
 };
 
 export const ORDERS = {

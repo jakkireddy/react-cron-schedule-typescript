@@ -1,4 +1,5 @@
 import { Recurrence } from "../components/Recurrence";
+import i18n from "../i18n";
 
 export default {
   title: "Example/Recurrence",
@@ -10,15 +11,15 @@ const commonArgs = {
     frequency: 6,
     // startDate: "2024-07-14T18:30:00.000Z",
     endCount: 10,
-    repeat: "monthly",
+    repeat: i18n.t("monthly"),
     cronExpression: ["0 0 1 * ?"],
-    timezone: "Asia/Kolkata",
+    timezone: "Москва (UTC+3)",
     skipFrom: 0,
     skipTo: 1,
   },
   disabled: false,
-  showCronExpression: false,
-  showOnlyBottomBorder: true,
+  showCronExpression: true,
+  showOnlyBottomBorder: false,
   onChange: (val) => {
     console.log("===> onChange: ", val);
   },
@@ -60,5 +61,5 @@ const commonArgs = {
 };
 
 export const Primary = {
-  args: commonArgs,
+  args: { repeat: i18n.t("weekly"), ...commonArgs },
 };

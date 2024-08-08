@@ -56,6 +56,7 @@ function DateSelection(props) {
           className={css.startDate}
           selected={startDate}
           onChange={handleStartDateChange}
+          dateFormat="yyyy-MM-dd"
         />
       </div>
       <div className={css.endContainer}>
@@ -84,6 +85,7 @@ function DateSelection(props) {
             className={css.startDate}
             selected={endDate}
             onChange={handleEndDateChange}
+            dateFormat="yyyy-MM-dd"
           />
         ) : selectedEndType === END_TYPES.COUNT ? (
           <>
