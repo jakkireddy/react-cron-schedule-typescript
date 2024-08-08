@@ -13,7 +13,7 @@
     "vite_build": "vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "npm_publish": "vite build && npm version patch && npm publish"
+    "npm_publish": "vite build && npm version patch && npm publish && git push --tags"
   },
   "author": "Fahim, gdev2018",
   "license": "Apache License 2.0",
