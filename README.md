@@ -12,12 +12,12 @@ or
 
 if you are installing from github package registry
 ```shell
-npm install @gdev2018/react-cron-schedule-typescript
+npm install @jakkireddy/react-cron-schedule-typescript
 ```
 
 If the library is not working as expected (Only for the user installed by github package registry), you may need to add the following line to your `.npmrc` file.
 ```npmrc
-  @gdev2018:registry=https://npm.pkg.github.com/gdev2018
+  @jakkireddy:registry=https://npm.pkg.github.com/gdev2018
 ```
 
 ## Demo
